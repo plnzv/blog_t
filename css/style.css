@@ -1,0 +1,334 @@
+* {
+  /*правильное отображение элементов с учетом всех марджинов и падингов. в начале очистим, чтобы задать потом*/
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*@-правило font-face используют для подключения шрифтов, лежащих в папке проекта*/
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Revalia";
+  src: url(../fonts/Revalia-Regular.ttf) format("truetype");
+}
+
+body {
+  font-family: Roboto;
+  color: #000000;
+}
+#goTop {
+   height: 60px;
+   width: 60px;
+   border-radius: 30px;
+   border: 2px solid gray;
+   position: fixed;
+   bottom: 50px;
+   right: 50px;
+ }
+
+
+.container {
+  width: 100%;
+  /*если нет сетки, то в фигме можно посмотреть выделяя от лого до конца элемента навигационного меню*/
+  margin: 0 auto;
+}
+
+.header {
+  background: #EEEFF1;
+  padding-top: 57px;
+  height: 700px;
+  padding-left: 18%;
+}
+
+ul, li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+btn {
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 100px;
+  padding: 10px 0;
+  display: block;
+}
+
+.nav {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  align-items: center;
+}
+
+.logo {
+  font-family: Revalia;
+  font-size: 48px;
+  font-weight: normal;
+  color: #34547A;
+  margin-right: 398px;
+}
+
+.menu {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  align-items: center;
+}
+
+.menu-item {
+  margin-right: 42px;
+}
+
+.menu-item a:hover {
+  color: #34547A;
+}
+
+.menu-item a {
+  color: #000000;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.offer {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  align-items: center;
+}
+
+.offer-pic {
+  margin-right: 143px;
+  margin-top: 161px;
+}
+
+.offer-content {
+  margin-top: 135px;
+}
+
+.offer-title {
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 60px;
+}
+
+.offer-txt {
+  width: 540px;
+  font-weight: normal;
+  font-size: 16px;
+  color: #727272;
+  margin-bottom: 85px;
+  display: block;
+}
+
+.btn-offer {
+  width: 255px;
+  text-decoration: none;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  background: #34547A;
+  padding: 25px 41px 25px;
+  font-weight: normal;
+}
+
+.btn-offer:hover {
+  text-decoration: underline;
+}
+
+/* -----------------section:about-----------------------*/
+.about-content {
+  margin-top: 119px;
+  margin-bottom: 100px;
+}
+
+.title-min {
+  font-weight: 500;
+  font-size: 32px;
+  text-align: center;
+}
+
+.about-text {
+  font-size: 16px;
+  text-align: center;
+  color: #727272;
+  margin-top: 50px;
+}
+
+/* -----------------section:skills_promo-----------------------*/
+.skills-promo {
+  background: #34547A;
+  height: 250px;
+  width: 100%;
+}
+
+.skill-promo-pic {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.img-skill {
+  margin-top: 100px;
+}
+
+/* -----------------section:skills-----------------------*/
+.skills {
+  height: 653px;
+}
+
+.skills-all {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills-content {
+  margin-top: 204px;
+  margin-right: 150px;
+}
+
+.skills-pic {
+  margin-top: 102px;
+}
+
+.skills-title {
+  margin-bottom: 50px;
+}
+
+.skill-name {
+  font-weight: normal;
+  font-size: 16px;
+  color: #727272;
+  margin-bottom: 19px;
+}
+
+.line-skill {
+  margin-bottom: 29px;
+}
+
+@media screen and (max-width: 1400px) and (min-width:1200px) {
+  .header {
+    padding-left: 10%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .header {
+    padding-left: 4%;
+    height: 100%;
+    padding-bottom: 25%;
+  }
+
+  .skills-all {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skills-content {
+    margin: 5% 0;
+  }
+
+  .skills-pic {
+    margin: 5% 0;
+  }
+
+  .logo {
+    margin-right: 5%;
+  }
+
+  .offer-pic img {
+    width: 200px;
+    margin-left: 30%;
+    margin-left: 30%;
+  }
+
+  .offer-content {
+    margin-top: 3%;
+  }
+
+  .offer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  .skills-promo {
+    height: 50%;
+  }
+
+  .skill-promo-pic {
+    padding-left: 6%;
+  }
+
+  .skill-promo-pic img {
+    width: 70%;
+    margin-right: 2%;
+    margin-top: 2%;
+  }
+
+  .img-skill {
+    margin: 2%;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  .logo {
+    margin-bottom: 5%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menu-item {
+    margin-right: 2%;
+  }
+
+  .menu-item a {
+    font-size: 11px;
+  }
+
+  .offer-title {
+    font-size: 30px;
+  }
+
+  .offer-txt {
+    width: 45%;
+    text-align:
+  }
+
+  img {
+    width: 30%;
+  }
+}
